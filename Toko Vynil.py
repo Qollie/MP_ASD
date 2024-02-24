@@ -7,10 +7,8 @@ class VinylRecord:
         self.TahunRilis = TahunRilis
         self.Harga = Harga
 
-
-
 class VinylStore:
-    def __init__(self):
+    def Create(self, vinyl_record):
         self.Records = []
 
         vinyl1 = VinylRecord(1, "Thriller", "Michael Jackson", "Pop", "1982", 47000000)
@@ -21,7 +19,6 @@ class VinylStore:
         self.Records.append(vinyl2)
         self.Records.append(vinyl3)
 
-    def Create(self, vinyl_record):
         for vinyl in self.Records:
             if vinyl.Id == vinyl_record.Id:
                 print("ID yang baru sudah ada, penambahan gagal.")
@@ -49,7 +46,6 @@ class VinylStore:
             if vinyl.Id == Id:
                 del self.Records[i]
                 break
-
 
 
 store = VinylStore()
